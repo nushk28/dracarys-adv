@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function selectDragon(name, image) {
+            localStorage.setItem('selectedDragon', JSON.stringify({ name: name, image: image }));
+            window.location.href = 'translate.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Choose Your Dragon</h1>
+    <div class="cards-container">
+        <div class="card">
+            <img src="images/vermithor.jpg" alt="Vermithor">
+            <button class="second" onclick="selectDragon('Vermithor', 'images/vermithor.jpg')">
+                <a href = "translate.html"><h2>Vermithor</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/silverwing.jpg" alt="Silverwing">
+            <button class="second" onclick="selectDragon('silverwing', 'images/silverwing.jpg')">
+                <a href = "translate.html"><h2>Silverwing</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/arrax.jpg" alt="Arrax">
+            <button class="second" onclick="selectDragon('arrax', 'images/arrax.jpg')">
+                <a href = "translate.html"><h2>Arrax</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/vermax.jpg" alt="Vermax">
+            <button class="second" onclick="selectDragon('vermax', 'images/vermax.jpg')">
+                <a href = "translate.html"><h2>Vermax</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/caraxes.jpg" alt="Caraxes">
+            <button class="second" onclick="selectDragon('caraxes', 'images/caraxes.jpg')">
+                <a href = "translate.html"><h2>Caraxes</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/meleys.jpg" alt="Meleys">
+            <button class="second" onclick="selectDragon('meleys', 'images/meleys.jpg')">
+                <a href = "translate.html"><h2>Meleys</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/sheepstealer.jpg" alt="Sheep Stealer">
+            <button class="second" onclick="selectDragon('sheepstealer', 'images/sheepstealer.jpg')">
+                <a href = "translate.html"><h2>Sheep Stealer</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/seasmoke.jpg" alt="Seasmoke">
+            <button class="second" onclick="selectDragon('seasmoke', 'images/seasmoke.jpg')">
+                <a href = "translate.html"><h2>Seasmoke</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/moondancer.jpg" alt="Moondancer">
+            <button class="second" onclick="selectDragon('moondancer', 'images/moondancer.jpg')">
+                <a href = "translate.html"><h2>Moondancer</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/tyraxes.jpg" alt="Tyraxes">
+            <button class="second" onclick="selectDragon('tyraxes', 'images/tyraxes.jpg')">
+                <a href = "translate.html"><h2>Tyraxes</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/syrax.jpg" alt="Syrax">
+            <button class="second" onclick="selectDragon('syrax', 'images/syrax.jpg')">
+                <a href = "translate.html"><h2>Syrax</h2></a></button>
+        </div>
+    </div>
+</body>
+</html>

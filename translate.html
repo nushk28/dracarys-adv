@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <h1>High Valyrian to English Translator</h1>
-    <textarea id="highValyrianText" placeholder="Enter High Valyrian text here"></textarea>
-    <button onclick="translateText()">Translate</button>
-    <div id="englishText"></div>
-    <script src="scripts.js"></script>
+    <h1>Character Orders to Dragon</h1>
+    
+    <div class="container">
+        <div class="character">
+            <img id="characterImage" src="" alt="Character Image" width="200">
+            <p id="characterName"></p>
+            <textarea id="englishTextInput" placeholder="Enter English text here"></textarea>
+            <button onclick="translateText()">Send Order</button>
+        </div>
+        
+        <div class="translation">
+            <h2>Translated Order:</h2>
+            <p id="translatedText"></p>
+        </div>
+        
+        <div class="dragon">
+            <img id="dragonImage" src="" alt="Dragon Image" width="200">
+            <p id="dragonName"></p>
+        </div>
+        
+        <button onclick="clearText()">Clear</button>
+        <br>
+        <button><a href="index.html">Return to King's Landing</a></button>
+    </div>
 </body>
 </html>

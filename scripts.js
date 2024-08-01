@@ -1,7 +1,21 @@
+document.addEventListener("DOMContentLoaded", loadSelections);
+
+async function loadSelections() {
+    const character = JSON.parse(localStorage.getItem('selectedCharacter'));
+    const dragon = JSON.parse(localStorage.getItem('selectedDragon'));
+
+    if (character && dragon) {
+        document.getElementById('characterImage').src = character.image;
+        document.getElementById('characterName').innerText = character.name;
+        document.getElementById('dragonImage').src = dragon.image;
+        document.getElementById('dragonName').innerText = dragon.name;
+    }
+}
+
 async function translateText() {
-    const highValyrianText = document.getElementById('highValyrianText').value;
+    const englishText = document.getElementById('englishTextInput').value;
     const url = 'https://api.funtranslations.com/translate/valyrian.json';
-    const data = { text: highValyrianText };
+    const data = { text: englishText };
 
     try {
         const response = await fetch(url, {
@@ -14,14 +28,19 @@ async function translateText() {
 
         if (response.ok) {
             const jsonResponse = await response.json();
-            const englishText = jsonResponse.contents.translated;
-            document.getElementById('englishText').innerText = englishText;
+            const translatedText = jsonResponse.contents.translated;
+            document.getElementById('translatedText').innerText = translatedText;
         } else {
             const errorResponse = await response.json();
-            document.getElementById('englishText').innerText = `Error: ${errorResponse.error.message}`;
+            document.getElementById('translatedText').innerText = `Error: ${errorResponse.error.message}`;
         }
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('englishText').innerText = 'An error occurred while translating the text.';
+        document.getElementById('translatedText').innerText = 'An error occurred while translating the text.';
     }
+}
+
+function clearText() {
+    document.getElementById('englishTextInput').value = '';
+    document.getElementById('translatedText').innerText = '';
 }

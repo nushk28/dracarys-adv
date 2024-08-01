@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function selectDragon(name, image) {
+            localStorage.setItem('selectedDragon', JSON.stringify({ name: name, image: image }));
+            window.location.href = 'translate.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Choose Your Dragon</h1>
+    <div class="cards-container">
+        <div class="card">
+            <img src="images/vhagar.jpg" alt="Vhagar">
+            <button class="second" onclick="selectDragon('vhagar', 'images/vhagar.jpg')">
+                <a href = "translate.html"><h2>Vhagar</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/dreamfyre.jpg" alt="Dreamfyre">
+            <button class="second" onclick="selectDragon('dreamfyre', 'images/dreamfyre.jpg')">
+                <a href = "translate.html"><h2>Dreamfyre</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/sunfyre.jpg" alt="Sunfyre">
+            <button class="second" onclick="selectDragon('sunfyre', 'images/sunfyre.jpg')">
+                <a href = "translate.html"><h2>Sunfyre</h2></a></button>
+        </div>
+        <div class="card">
+            <img src="images/tessarion.jpg" alt="Tessarion">
+            <button class="second" onclick="selectDragon('tessarion', 'images/tessarion.jpg')">
+                <a href = "translate.html"><h2>Tessarion</h2></a></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -5,23 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Characters</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function selectCharacter(name, image) {
+            localStorage.setItem('selectedCharacter', JSON.stringify({ name: name, image: image }));
+        }
+    </script>
 </head>
 <body>
     <h1>Choose Your Character</h1>
-    <div class="cards-container">
-        <div class="card">
-            <img src="images/daemon.jpg" alt="Daemon">
-            <a href="dragons.html"><button class="third"><h2>Daemon Targaryen</h2></button></a>
+    <div class="team-container">
+        <h1>Team Black</h1>
+        <div class="team black cards-container">
+            <div class="card">
+                <img src="images/daemon.jpg" alt="Daemon">
+                <a href="dragons-black.html" onclick="selectCharacter('Daemon', 'images/daemon.jpg')">
+                    <button class="third"><h2>Daemon Targaryen</h2></button>
+            </div>
+            <div class="card">
+                <img src="images/rhaenys.jpg" alt="Rhaenys">
+                <a href="dragons-black.html" onClick="selectCharacter('Rhaenys', 'images/rhaenys.jpg')">
+                    <button class="third"><h2>Rhaenys Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/rhaenyra.jpg" alt="Rhaenyra">
+                <a href="dragons-black.html" onClick="selectCharacter('Rhaenyra', 'images/rhaenyra.jpg')">
+                    <button class="third"><h2>Rhaenyra Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/lucerys.jpg" alt="Lucerys">
+                <a href="dragons-black.html" onClick="selectCharacter('Lucerys','images/lucerys.jpg')">
+                    <button class="third"><h2>Lucerys Velaryon</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/jacaerys.jpg" alt="Jacaerys">
+                <a href="dragons-black.html" onClick="selectCharacter('Jacaerys', 'images/jacaerys.jpg')">
+                    <button class="third"><h2>Jacaerys Velaryon</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/hugh.jpg" alt="Hugh">
+                <a href="dragons-black.html" onClick="selectCharacter('hugh', 'images/hugh.jpg')">
+                    <button class="third"><h2>Hugh Hammer</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/joffrey.jpg" alt="Joffrey">
+                <a href="dragons-black.html" onClick="selectCharacter('Joffrey', 'images/joffrey.jpg')">
+                    <button class="third"><h2>Joffrey Velaryon</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/ulf.jpg" alt="Ulf">
+                <a href="dragons-black.html" onClick="selectCharacter('ulf', 'images/ulf.jpg')">
+                    <button class="third"><h2>Ulf White</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/addam.jpg" alt="Addam">
+                <a href="dragons-black.html" onClick="selectCharacter('addam', 'images/addam.jpg')">
+                    <button class="third"><h2>Addam Velaryon</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/rhaena.jpg" alt="Rhaena">
+                <a href="dragons-black.html" onClick="selectCharacter('rhaena', 'images/rhaena.jpg')">
+                    <button class="third"><h2>Rhaena Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/baela.jpg" alt="Baela">
+                <a href="dragons-black.html" onClick="selectCharacter('baela', 'images/baela.jpg')">
+                    <button class="third"><h2>Baela Targaryen</h2></button></a>
+            </div>
         </div>
-        <div class="card">
-            <img src="images/rhaenys.jpg" alt="Rhaenys">
-            <a href="dragons.html"><button class="third"><h2>Rhaenys Targaryen</h2></button></a>
+    </div>
+    <div class="team-container">
+        <h1>Team Green</h1>
+        <div class="team green cards-container">
+            <div class="card">
+                <img src="images/aegon.jpg" alt="Aegon">
+                <a href="dragons-green.html" onClick="selectCharacter('aegon', 'images/aegon.jpg')">
+                    <button class="fourth"><h2>Aegon Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/aemond.jpg" alt="Aemond">
+                <a href="dragons-green.html" onClick="selectCharacter('aemond', 'images/aemond.jpg')">
+                    <button class="fourth"><h2>Aemond Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/daeron.jpg" alt="Daeron">
+                <a href="dragons-green.html" onClick="selectCharacter('daeron', 'images/daeron.jpg')">
+                    <button class="fourth"><h2>Daeron Targaryen</h2></button></a>
+            </div>
+            <div class="card">
+                <img src="images/helaena.jpg" alt="Helaena">
+                <a href="dragons-green.html" onClick="selectCharacter('helaena', 'images/helaena.jpg')">
+                    <button class="fourth"><h2>Helaena Targaryen</h2></button></a>
+            </div>
         </div>
-        <div class="card">
-            <img src="images/rhaenyra.jpg" alt="Rhaenyra">
-            <a href="dragons.html"><button class="third"><h2>Rhaenyra Targaryen</h2></button></a>
-        </div>
-        <!-- Add more cards here -->
     </div>
 </body>
 </html>

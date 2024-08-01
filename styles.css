@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Old English Text MT, Times New Roman, serif;
     background: #000;
     color: #fff;
     text-align: center;
@@ -36,8 +36,11 @@ nav ul li a {
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    width: 200px;
+    width: calc(25% - 40px); /* 33.333% of the container width minus margin */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card img {
@@ -64,6 +67,8 @@ button {
     background: #ff4500;
     color: #fff;
     cursor: pointer;
+    position: relative;
+    font-family: old english text mt;
 }
 
 #englishText {
@@ -93,4 +98,18 @@ button {
 
 .card1{
     box-align: center;
+}
+
+.fourth{
+    background: green;
+    color: yellow;
+}
+ 
+.translation {
+    margin: 20px;
+    font-size: 18px;
+}
+
+#translatedText {
+    margin-top: 10px;
 }
