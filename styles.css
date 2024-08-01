@@ -110,9 +110,6 @@ button {
     font-size: 18px;
 }
 
-#translatedText {
-    margin-top: 10px;
-}
 
 .chat-container {
     display: flex;
@@ -151,6 +148,7 @@ button {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    padding: 10px;
 }
 
 textarea {
@@ -182,11 +180,6 @@ button {
     max-width: 600px;
     margin: 10px;
     text-align: center;
-}
-
-#translatedText {
-    margin-top: 10px;
-    font-size: 18px;
 }
 
 button a {

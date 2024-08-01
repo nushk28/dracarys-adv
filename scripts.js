@@ -28,19 +28,19 @@ async function translateText() {
 
         if (response.ok) {
             const jsonResponse = await response.json();
-            const translatedText = jsonResponse.contents.translated;
-            document.getElementById('translatedText').innerText = translatedText;
+            const valariyanTextOutput = jsonResponse.contents.translated;
+            document.getElementById('valariyanTextOutput').innerText = valariyanTextOutput;
         } else {
             const errorResponse = await response.json();
-            document.getElementById('translatedText').innerText = `Error: ${errorResponse.error.message}`;
+            document.getElementById('valariyanTextOutput').innerText = `Error: ${errorResponse.error.message}`;
         }
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('translatedText').innerText = 'An error occurred while translating the text.';
+        document.getElementById('valariyanTextOutput').innerText = 'An error occurred while translating the text.';
     }
 }
 
 function clearText() {
     document.getElementById('englishTextInput').value = '';
-    document.getElementById('translatedText').innerText = '';
+    document.getElementById('valariyanTextOutput').innerText = '';
 }
