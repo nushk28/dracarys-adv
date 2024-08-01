@@ -8,7 +8,7 @@ This project is a web application inspired by the "House of the Dragon" series. 
 
 - **Character Selection**: Choose your favorite character from the series.
 - **Dragon Selection**: Select a dragon to ride.
-- **Translation**: Translate text from High Valyrian to English.
+- **Translation**: Translate text from English to High Valyrian .
 
 ## Technologies Used
 
