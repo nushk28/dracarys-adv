@@ -10,27 +10,31 @@
 <body>
     <h1>Character Orders to Dragon</h1>
     
-    <div class="container">
-        <div class="character">
-            <img id="characterImage" src="" alt="Character Image" width="200">
-            <p id="characterName"></p>
-            <textarea id="englishTextInput" placeholder="Enter English text here"></textarea>
-            <button onclick="translateText()">Send Order</button>
+    <div class="chat-container">
+        <div class="message-box character-box">
+            <img id="characterImage" src="" alt="Character Image" class="avatar">
+            <div class="message">
+                <p id="characterName" class="name"></p>
+                <textarea id="englishTextInput" placeholder="Enter English text here"></textarea>
+                <button onclick="translateText()">Translate</button>
+            </div>
         </div>
         
-        <div class="translation">
-            <h2>Translated Order:</h2>
+        <div class="message-box translation-box">
+            <h2>Translated text:</h2>
             <p id="translatedText"></p>
         </div>
         
-        <div class="dragon">
-            <img id="dragonImage" src="" alt="Dragon Image" width="200">
-            <p id="dragonName"></p>
+        <div class="message-box dragon-box">
+            <img id="dragonImage" src="" alt="Dragon Image" class="avatar">
+            <div class="message">
+                <p id="dragonName" class="name"></p>
+            </div>
         </div>
-        
-        <button onclick="clearText()">Clear</button>
-        <br>
-        <button><a href="index.html">Return to King's Landing</a></button>
     </div>
+    
+    <button onclick="clearText()">Clear</button>
+    <br>
+    <button><a href="index.html">Return to King's Landing</a></button>
 </body>
 </html>
